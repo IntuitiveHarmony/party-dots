@@ -34,13 +34,59 @@ const Box = ({ size }) => {
   );
 };
 
+// This is for the link to my gitHub page in the seventh dot
+const GitBox = ({ size }) => {
+  const [color, setColor] = useState(getRandomColor()); // Initialize state for the color of the box using the getRandomColor function
+
+  useEffect(() => { // Use the useEffect hook to change the color of the box at random intervals
+    const intervalId = setInterval(() => setColor(getRandomColor()), Math.random() * 4500 + 500); // Set an interval that calls getRandomColor and sets the color of the box using setColor
+    return () => clearInterval(intervalId); // Clear the interval when the component is unmounted
+  }, []);
+
+  function getRandomColor() { // This function generates a random hexadecimal color code
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  // Render the colored box with the specified size and a GitHub icon
+  return (
+    <div
+      className='gitBox'
+      style={{
+        backgroundColor: color,
+        borderRadius: '50%',
+        width: `${size}vw`,
+        paddingTop: `${size / 10}vw`,
+        paddingBottom: `${size / 10}vw`,
+        float: 'left',
+        boxSizing: 'border-box',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: `${size / 1.5}vw`,
+      }}
+    >
+      <a href='https://github.com/IntuitiveHarmony/react-dots' className="pinkLink" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-github"></i>
+      </a>
+    </div>
+  );
+};
 
 
 // A React functional component that renders multiple boxes using the Box component
 const BoxContainer = ({ numBoxes, boxSize, backgroundColor }) => {
   // Create an array of boxes with the specified number and size
   const boxes = Array.from({ length: numBoxes }).map((_, i) => (
-    <Box key={i} size={boxSize} />
+    // If statement to laydown the github link
+      (i == 13) ? <GitBox key={i} size={boxSize} /> : <Box key={i} size={boxSize} />
+    
   ));
 
   // Render the box container with the specified background color and style
