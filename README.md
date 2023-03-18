@@ -1,4 +1,4 @@
-# React-Dots
+# Party-Dots
 
 [Live Site](https://intuitiveharmony.github.io/react-dots/ "Go See the Dots!")
 
