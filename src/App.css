@@ -50,12 +50,9 @@ h1 {
   text-decoration: none;
 }
 .pinkLink:hover {
-  color:aqua;
+  color: limegreen;
   text-decoration: underline;
 }
 .gitLink:hover {
   text-decoration: none;
-}
-.fab {
-
 }
