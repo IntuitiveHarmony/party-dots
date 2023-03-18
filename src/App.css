@@ -45,7 +45,6 @@ h1 {
   display: flex;
 }
 .pinkLink {
-  /* font-size: 2em; */
   cursor: pointer;
   color: magenta;
   text-decoration: none;
