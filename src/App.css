@@ -41,15 +41,22 @@ h1 {
     color: black;
   }
 }
-
+.gitBox {
+  display: flex;
+}
 .pinkLink {
+  /* font-size: 2em; */
   cursor: pointer;
   color: magenta;
   text-decoration: none;
 }
 .pinkLink:hover {
+  color:aqua;
   text-decoration: underline;
 }
 .gitLink:hover {
   text-decoration: none;
+}
+.fab {
+
 }

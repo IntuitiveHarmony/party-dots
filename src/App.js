@@ -34,6 +34,7 @@ const Box = ({ size }) => {
   );
 };
 
+// This is for the link to my gitHub page in the seventh dot
 const GitBox = ({ size }) => {
   const [color, setColor] = useState(getRandomColor()); // Initialize state for the color of the box using the getRandomColor function
 
@@ -51,18 +52,30 @@ const GitBox = ({ size }) => {
     return color;
   }
 
-  // Render the colored box with the specified size
+  // Render the colored box with the specified size and a GitHub icon
   return (
     <div
+      className='gitBox'
       style={{
         backgroundColor: color,
         borderRadius: '50%',
         width: `${size}vw`,
-        paddingBottom: `${size}vw`,
+        paddingTop: `${size / 10}vw`,
+        paddingBottom: `${size / 10}vw`,
         float: 'left',
         boxSizing: 'border-box',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: `${size / 1.5}vw`,
       }}
-    ><a href='https://github.com/IntuitiveHarmony/react-dots' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></div>
+    >
+      <a href='https://github.com/IntuitiveHarmony/react-dots' className="pinkLink" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-github"></i>
+      </a>
+    </div>
   );
 };
 
@@ -71,13 +84,8 @@ const GitBox = ({ size }) => {
 const BoxContainer = ({ numBoxes, boxSize, backgroundColor }) => {
   // Create an array of boxes with the specified number and size
   const boxes = Array.from({ length: numBoxes }).map((_, i) => (
-    
-      (i == 7) ? <GitBox key={i} size={boxSize} /> : <Box key={i} size={boxSize} />
-        
-     
-        
-    
-    
+    // If statement to laydown the github link
+      (i == 13) ? <GitBox key={i} size={boxSize} /> : <Box key={i} size={boxSize} />
     
   ));
 
