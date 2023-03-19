@@ -113,8 +113,6 @@ const BoxContainer = ({ numBoxes, boxSize, backgroundColor }) => {
 
 
 
-
-
 export default function App() {
   const [start, setStart] = useState(false); // state to determine whether the animation has started
   const [backgroundColor, setBackgroundColor] = useState(getRandomColor()); // state to set the background color of the animation
