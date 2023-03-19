@@ -23,6 +23,7 @@ const Box = ({ size }) => {
   return (
     <div className='box'
       style={{
+        // boxShadow: `inset ${size / 5}px -${size / 1}px ${size * 2}px #353535`,
         backgroundColor: color,
         borderRadius: '50%',
         width: `${size}vw`,
@@ -57,6 +58,7 @@ const GitBox = ({ size }) => {
     <div
       className='gitBox box'
       style={{
+        // boxShadow: `inset ${size / 5}px -${size / 1}px ${size * 2}px #353535`,
         backgroundColor: color,
         borderRadius: '50%',
         width: `${size}vw`,

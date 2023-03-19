@@ -1,9 +1,6 @@
 h1 {
   margin-left: 2em;
 }
-.box {
-  box-shadow: inset 3px -6px 20px #353535;
-}
 .box-container {
   width: 100vw;
   height: 100vh;
