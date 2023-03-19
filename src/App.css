@@ -2,9 +2,7 @@ h1 {
   margin-left: 2em;
 }
 .box {
-  float: left;
-  box-sizing: border-box;
-  border-radius: 30px;
+  box-shadow: inset 3px -6px 20px #353535;
 }
 .box-container {
   width: 100vw;
