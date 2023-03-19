@@ -1,15 +1,6 @@
-
-<style>
-    .filter1 {
-        filter: hue-rotate(180);
-    }
-</style>
-
 # <img src="./public/favicon.ico" width="20em"/> Party-Dots
 
-[Live Site](https://intuitiveharmony.github.io/party-dots/ "Party with the Dots!")
-
-I wanted to see what we could build togehter.      
+### Check out the [Live Site](https://intuitiveharmony.github.io/party-dots/ "Party with the Dots!")    
 
 <br />
 
@@ -33,7 +24,13 @@ Let's go!
 
 ## <img src="./public/favicon.ico" width="15em"/> Set Up
 
-To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <span style="color: cyan; background-color: magenta; " >prompt => copy and paste frenzy</span> I wasn't following proper git flow so my initial commit is a major portion of the project completed.  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots 
+To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a 
+<span style="color: lime; background-color: grey; " >&nbsp;prompt </span>
+<span style="color: grey; background-color: yellow; " >&nbsp;=> </span>
+<span style="color: salmon; background-color: turquoise; " >&nbsp;copy </span>
+<span style="color: coral; background-color: purple; " >&nbsp;and </span>
+<span style="color: navy; background-color: lime; " >&nbsp;paste </span>
+<span style="color: cyan; background-color: magenta; " >&nbsp;frenzy!!! </span> I wasn't following proper git flow so my initial commit is a major portion of the project completed.  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots 
 
 <br />
 
