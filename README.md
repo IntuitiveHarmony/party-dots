@@ -10,7 +10,13 @@ I am facinated by Artificial Intelegence.  OpenAI's [chatGPT](https://openai.com
 
 ## GPT Co-Create-React-App
 
-In this project I wanted to take more of a back seat role and see what chatGPT could create based solely on me inputing prompts into the chat bot describing what I was trying to put together.  To be clear: <span style="color: black; background-color: goldenrod; " >most of this code was copy/ pasted from chatGPT!</span> There were a few times that I interviened because the bot was unable to complete what I was trying to accomplish although I still tried to exaust my attempts to solve it within the chat prompts rather than simply changeing the code itself.  
+In this project I wanted to take more of a back seat role and see what chatGPT could create based solely on me inputing prompts into the chat bot describing what I was trying to put together.  To be clear: <span style="color: black; background-color: goldenrod; " >most of this code was copy/ pasted from chatGPT!</span> 
+
+### What Does that Mean?
+
+- There is some code in this project that I would have approached differently
+- There are a few lines of code in here that I don't completely understand at the moment
+- There were a few times that I interviened because the bot was unable to complete what I was trying to accomplish although I still tried to exaust my attempts to solve it within the chat prompts rather than simply changeing the code itself.  
 
 <br />
 
