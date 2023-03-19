@@ -142,6 +142,6 @@ export default function App() {
   }
 
   // if the animation has started, render the BoxContainer component with 400 boxes, a box size of 7vw, and the current background color, otherwise render nothing
-  return start ? <BoxContainer numBoxes={400} boxSize={7} backgroundColor={backgroundColor} /> : <h1>loading dots<span className='dot1'>.</span><span className='dot2'>.</span><span className='dot3'>.</span></h1>;
+  return start ? <BoxContainer numBoxes={406} boxSize={7} backgroundColor={backgroundColor} /> : <h1>loading dots<span className='dot1'>.</span><span className='dot2'>.</span><span className='dot3'>.</span></h1>;
 }
 
