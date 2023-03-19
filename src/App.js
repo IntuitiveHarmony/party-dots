@@ -21,7 +21,7 @@ const Box = ({ size }) => {
 
   // Render the colored box with the specified size
   return (
-    <div
+    <div className='box'
       style={{
         backgroundColor: color,
         borderRadius: '50%',
@@ -55,7 +55,7 @@ const GitBox = ({ size }) => {
   // Render the colored box with the specified size and a GitHub icon
   return (
     <div
-      className='gitBox'
+      className='gitBox box'
       style={{
         backgroundColor: color,
         borderRadius: '50%',
