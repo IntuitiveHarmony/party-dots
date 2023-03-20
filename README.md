@@ -1,10 +1,10 @@
-# <img src="./public/favicon.ico" width="20em"/> Party-Dots
+# <img src="./public/favicon.ico" width="24em"/> Party-Dots
 
 ### Check out the [Live Site](https://intuitiveharmony.github.io/party-dots/ "Party with the Dots!")    
 
 <br />
 
-## <img src="./public/favicon.ico" width="15em" class="filter1"/> GPT Co-Create-React-App
+## <img src="./public/favicon.ico" width="19em" class="filter1"/> GPT Co-Create-React-App
 
 In this project I wanted to take more of a back seat role and see what OpenAI's [chatGPT](https://openai.com/blog/chatgpt) could create based solely on me inputing prompts into the chat bot describing what I was trying to put together.  I had an idea of creating a React App that was a page covered in squrares that changed to a random color at random time intervals. 
 
@@ -23,7 +23,7 @@ Let's go!
 
 <br />
 
-## <img src="./public/favicon.ico" width="15em"/> Set Up
+## <img src="./public/favicon.ico" width="19em"/> Set Up
 
 <div style="display: inline;">To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a</div> 
 <div style="color: lime; background-color: grey; display: inline;" >&nbsp;prompt </div>
@@ -35,7 +35,7 @@ Let's go!
 
 <br />
 
-## <img src="./public/favicon.ico" width="15em"/> The Prompts Begin
+## <img src="./public/favicon.ico" width="19em"/> The Prompts Begin
 
 > GPT - Hello! How may I assist you today?<br />ME - make a react app page that has small divs that individually change color randomly 
 
