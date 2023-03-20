@@ -24,7 +24,7 @@ Let's go! ⚡
 
 ## <img src="./public/favicon.ico" width="18em"/> Set Up
 
-To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed.  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  If you are really curious you can explore [party-dots2](), where I made another repo I made so I could get the neccessary screenschots for this write up.  
+To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat).  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  If you are really curious you can explore [party-dots2](), where I made another repo I made so I could get the neccessary screenschots for this write up.  
 
 <br />
 
@@ -34,27 +34,24 @@ While I am very polite I real life and with humans, I chose to be as direct as I
 
 <br />
 
+*prompt 1*
 > GPT - Hello! How may I assist you today?<br />ME - make a react app page that has small divs that individually change color randomly<br />...<br/>GPT - Sure! Here's an example of a React component that generates small divs with random colors:
 
 <br />
 
 Once I ran the [code](https://github.com/IntuitiveHarmony/party-dots2/blob/0681ba0da97d2cedf1a27729d617f4fd9049e49c/src/App.js) that it gave me I ended up with a large handful of randomly colored squares that would change to random colors once they were clicked. Not quite what I was going for but hey, Rome wasn't built in a day either.
 
-![Clickable Squares Gif](./src/images/clickSquare.gif)
-
-<br />
-
 It also gave me an explination of the code it provided, which I didn't read, beacuse, as I stated earlier, I was trappend in a 🌪️ of <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>pasting</kbd>   
 
 I did however, include them in the code as comments if you are interested in reading what chatGPT had to say about its own code.
 
+![Clickable Squares Gif](./src/images/clickSquare.gif)
+
 <br />
 
-> ME - Can you make it so the page is covered with boxes and they change colors on their own rather than a click<br/>GPT - Sure! Here's an updated [version](https://github.com/IntuitiveHarmony/party-dots2/blob/56ac4e2514502813f1a32a1fcd82c01015ba39a2/src/App.js) of the component that generates boxes that automatically change colors:
 
-<br/>
-
-![Same Time GIF](./src/images/sameTimeSquares.gif)
+*prompt 2*
+> ME - Can you make it so the page is covered with boxes and they change colors on their own rather than a click<br/>GPT - Sure! Here's an updated [version](https://github.com/IntuitiveHarmony/party-dots2/blob/9b74ebe8d28bca15210b4cbd2c4a76b0b34ebe49/src/App.js) of the component that generates boxes that automatically change colors:
 
 <br/>
 
@@ -62,5 +59,21 @@ I had a couple of issues with this output:
 
 - All of the squares were at the top of the page.
 - All of the squares were changing colors at the same time
+
+I knew that we needed to address these problems one at a time 🔧
+
+![Same Time GIF](./src/images/sameTimeSquares.gif)
  
+<br/>
+
+*prompt 3*
+> ME - Can you make it so the boxes change at random time intervals rather than at all the same time<br/>GPT - Sure! Here's an updated [version](https://github.com/IntuitiveHarmony/party-dots2/blob/ef2c7ce652c224bc41a17110f78db338c137ada4/src/App.js) of the component that generates boxes that change colors at random intervals:
+
+<br/>
+
+The Intervals were happening closer to what I had originaly invisioned.  Let's work on the squares taking up the whole page now.
+
+*some of these GIFS have a poor quality and do not reflect the actual page acurately*
+
+![Bad Looking Gif](./src/images/badGIF.gif)
 
