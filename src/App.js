@@ -74,7 +74,7 @@ const GitBox = ({ size }) => {
         fontSize: `${size / 1.5}vw`,
       }}
     >
-      <a href='https://github.com/IntuitiveHarmony/party-dots' className="pinkLink" target="_blank" rel="noopener noreferrer">
+      <a href='https://github.com/IntuitiveHarmony/party-dots#readme' className="pinkLink" target="_blank" rel="noopener noreferrer">
         <i className="fab fa-github"></i>
       </a>
     </div>
