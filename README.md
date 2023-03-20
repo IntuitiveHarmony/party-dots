@@ -4,7 +4,7 @@
 
 <br />
 
-## <img src="./public/favicon.ico" width="19em" class="filter1"/> GPT Co-Create-React-App
+## <img src="./public/favicon.ico" width="18em" class="filter1"/> GPT Co-Create-React-App
 
 In this project I wanted to take more of a back seat role and see what OpenAI's [chatGPT](https://openai.com/blog/chatgpt) could create based solely on me inputing prompts into the chat bot describing what I was trying to put together.  I had an idea of creating a React App that was a page covered in squrares that changed to a random color at random time intervals. 
 
