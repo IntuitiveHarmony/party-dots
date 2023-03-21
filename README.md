@@ -51,7 +51,6 @@ I did however, include them in the code as comments if you are interested in rea
 
 <br />
 
-
 *prompt 2*
 > ME - Can you make it so the page is covered with boxes and they change colors on their own rather than a click<br/><br/>GPT - Sure! Here's an updated [version](https://github.com/IntuitiveHarmony/party-dots2/blob/9b74ebe8d28bca15210b4cbd2c4a76b0b34ebe49/src/App.js) of the component that generates boxes that automatically change colors:
 
@@ -78,3 +77,15 @@ The Intervals were happening closer to what I had originaly invisioned.  Let's w
 ![Bad Looking Gif](./src/images/badGIF.gif)
 
 *NOTE: some of these GIFs have a poor quality and do not reflect the actual page content acurately<br>If anyone can show me how to make a high quality GIFs send me a message* 😎
+
+<br/>
+
+## <img src="./public/favicon.ico" width="18em"/> Interuption
+
+When I went to work on this markdown today I was meet with this message:
+
+<br/>
+
+![GPT Warning](./src/images/GPTWarning.png)
+
+This brings up a point on using this or any 3rd party technology that we may as well talk about now. The user may place varying levels of dependency on the tools they use.  When these tools breakdown or are tempararally unavailable it can create a real issue for their own productivity.  Since all of the chat history is currently unavailable I am unable to go back through to get the versions of the code I went through with GPT.  There is also the possibility that those chat histories are gone foever (it has happened before 😭)
