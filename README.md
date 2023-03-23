@@ -6,6 +6,10 @@
 
 <br />
 
+🚧 THIS README IS A WORK IN PROGRESS 🚧
+
+<br/>
+
 ## <img src="./public/favicon.ico" width="18em" class="filter1"/> GPT Co-Create-React-App
 
 In this project I wanted to take more of a back seat role and see what OpenAI's [chatGPT](https://openai.com/blog/chatgpt) could create based solely on me inputing prompts into the chat bot describing what I was trying to put together.  I had an idea of creating a React App that was a page covered in squrares that changed to a random color at random time intervals. 
@@ -117,3 +121,6 @@ Luckily, this was just party dots (as awesome as it is) and not a more important
 <br/>
 
 >ME - now it is in three seperate strips<br/><br/>GPT - I see, that's likely due to the default flex-direction value of row on the display: flex property of the container<br/><br/>GPT - To make the boxes fill up the entire page without any gaps, you can set the flex-direction to column, and adjust the width and height values of the BoxContainer accordingly. Here's an updated version of the code:
+
+
+
