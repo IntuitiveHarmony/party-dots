@@ -26,7 +26,7 @@ Let's go! ⚡
 
 ## <img src="./public/favicon.ico" width="18em"/> Set Up
 
-To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat).  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  If you are really curious you can explore [party-dots2](), where I made another repo I made so I could get the neccessary screenschots for this write up.  
+To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat).  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  If you are really curious you can explore [party-dots2](), where I made another repo so I could get the neccessary screenschots for this write up.  
 
 <br />
 
@@ -89,3 +89,16 @@ When I went to work on this markdown today I was meet with this message:
 ![GPT Warning](./src/images/GPTWarning.png)
 
 This brings up a point on using this or any 3rd party technology that we may as well talk about now. The user may place varying levels of dependency on the tools they use.  When these tools breakdown or are tempararally unavailable it can create a real issue for their own productivity.  Since all of the chat history is currently unavailable I am unable to go back through to get the versions of the code I went through with GPT.  There is also the possibility that those chat histories are gone foever (it has happened before 😭)
+
+### A few days later...
+
+I went to check to see if my chat history was avalable and I was meet with a different message. 
+
+<br/>
+
+![Another GPT Warning](./src/images/anotherWarning.png)
+
+Luckily, this was just party dots (as awesome as it is) and not a more important project.  If it were a more urgent that I needed the information from that chat history I would basicly need to try and recreate the prompts and just see what I got back.
+
+## <img src="./public/favicon.ico" width="18em"/> Back In Business
+
