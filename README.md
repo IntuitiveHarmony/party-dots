@@ -30,7 +30,11 @@ Let's go! ⚡
 
 ## <img src="./public/favicon.ico" width="18em"/> Set Up
 
-To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat :octocat:).  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  If you are really curious you can explore [party-dots2](https://github.com/IntuitiveHarmony/party-dots2), where I made another repo so I could get the neccessary screenschots for this write up. 
+To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  
+
+Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat :octocat:).  Therefore, I have included some of my prompts and the code (as links usually) that was produced by GPT3 in the process of co-writing Party Dots.  
+
+If you are really curious you can explore the commit history of [party-dots2](https://github.com/IntuitiveHarmony/party-dots2), where I made another repo so I could get the neccessary screenschots for this write up. 
 
 If you are curious you can find the bulk of the transcript by looking at the [chat.md](https://github.com/IntuitiveHarmony/party-dots/blob/master/chat.md) 
 
