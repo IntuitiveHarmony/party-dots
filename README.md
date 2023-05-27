@@ -30,7 +30,9 @@ Let's go! ⚡
 
 ## <img src="./public/favicon.ico" width="18em"/> Set Up
 
-To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat).  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  If you are really curious you can explore [party-dots2](https://github.com/IntuitiveHarmony/party-dots2), where I made another repo so I could get the neccessary screenschots for this write up.  
+To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat).  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  If you are really curious you can explore [party-dots2](https://github.com/IntuitiveHarmony/party-dots2), where I made another repo so I could get the neccessary screenschots for this write up. 
+
+If you are curious you can find the bulk of the transcript by looking at the [chat.md](https://github.com/IntuitiveHarmony/party-dots/blob/master/chat.md) 
 
 <br />
 
@@ -41,11 +43,11 @@ While I am very polite I real life and with humans, I chose to be as direct as I
 <br />
 
 ### *prompt 1*
-> GPT - Hello! How may I assist you today?<br /><br/>ME - make a react app page that has small divs that individually change color randomly<br /><br/>GPT - Sure! Here's an example of a React component that generates small divs with random colors:
+> GPT - Hello! How may I assist you today?<br /><br/>ME - make a react app page that has small divs that individually change color randomly<br /><br/>GPT - Sure! Here's an [example](https://github.com/IntuitiveHarmony/party-dots2/blob/0681ba0da97d2cedf1a27729d617f4fd9049e49c/src/App.js) of a React component that generates small divs with random colors:
 
 <br />
 
-Once I ran the [code](https://github.com/IntuitiveHarmony/party-dots2/blob/0681ba0da97d2cedf1a27729d617f4fd9049e49c/src/App.js) that it gave me I ended up with a large handful of randomly colored squares that would change to random colors once they were clicked. Not quite what I was going for but hey, Rome wasn't built in a day either.
+Once I ran the code that it gave me I ended up with a large handful of randomly colored squares that would change to random colors once they were clicked. Not quite what I was going for but hey, Rome wasn't built in a day either.
 
 It also gave me an explination of the code it provided, which I didn't read, beacuse, as I stated earlier, I was trapped in a 🌪️ of <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>pasting</kbd>   
 
@@ -124,5 +126,70 @@ Luckily, this was just party dots (as awesome as it is) and not a more important
 
 >ME - now it is in three seperate strips<br/><br/>GPT - I see, that's likely due to the default flex-direction value of row on the display: flex property of the container<br/><br/>GPT - To make the boxes fill up the entire page without any gaps, you can set the flex-direction to column, and adjust the width and height values of the BoxContainer accordingly. Here's an updated version of the [code](https://github.com/IntuitiveHarmony/party-dots2/blob/35bc93744af725c51cac640db357ab38cc6456d4/src/App.js):
 
+This version made the boxes in on column all the way over to the right.
+
+![thinStrip](./src/images/thinStrip.png)
+
+## 😑
+
+<br/>
+
+## <img src="./public/favicon.ico" width="18em"/> Let's Back Up a Minute
+
+It seemed like we started getting farther from where I wanted to go so I brought it back to the code from the third prompt.  This felt like it was the closest so far to the direction I wanted to go. This is what it looked like:
+
+![Bad Looking Gif](./src/images/badGIF.gif)
+
+<br/>
+
+### *prompt 6*
+
+>ME - go back to this code :<br/><br/>
+>```javascript
+>import React, { useState, useEffect } from 'react';
+>
+>const Box = ({ size }) => {
+>  const [color, setColor] = useState(getRandomColor());
+>  const [intervalId, setIntervalId] = useState(null);
+>
+>  useEffect(() => {
+>    const id = setTimeout(() => setColor(getRandomColor()), Math.random() * 5000);
+>    setIntervalId(id);
+>    return () => clearInterval(intervalId);
+>  }, [intervalId]);
+>
+>  function getRandomColor() {
+>    const letters = '0123456789ABCDEF';
+>    let color = '#';
+>    for (let i = 0; i < 6; i++) {
+>      color += letters[Math.floor(Math.random() * 16)];
+>    }
+>    return color;
+>  }
+>
+>  return (
+>    <div
+>      style={{
+>        backgroundColor: color,
+>        width: `${size}px`,
+>        height: `${size}px`,
+>        margin: '1px',
+>      }}
+>    />
+>  );
+>};
+>
+>const BoxContainer = ({ numBoxes, boxSize }) => {
+>  const boxes = Array.from({ length: numBoxes }).map((_, i) => (
+>    <Box key={i} size={boxSize} />
+>  ));
+>  return <div style={{ display: 'flex', flexWrap: 'wrap' }}>{boxes}</div>;
+>};
+>
+>export default function App() {
+>  return <BoxContainer numBoxes={400} boxSize={8} />;
+>}
+>```
+><br/><br/>GPT - Sure, what changes would you like me to make?
 
 
