@@ -30,7 +30,7 @@ Let's go! ⚡
 
 ## <img src="./public/favicon.ico" width="18em"/> Set Up
 
-To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat).  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  If you are really curious you can explore [party-dots2](), where I made another repo so I could get the neccessary screenschots for this write up.  
+To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat).  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  If you are really curious you can explore [party-dots2](https://github.com/IntuitiveHarmony/party-dots2), where I made another repo so I could get the neccessary screenschots for this write up.  
 
 <br />
 
@@ -40,7 +40,7 @@ While I am very polite I real life and with humans, I chose to be as direct as I
 
 <br />
 
-*prompt 1*
+### *prompt 1*
 > GPT - Hello! How may I assist you today?<br /><br/>ME - make a react app page that has small divs that individually change color randomly<br /><br/>GPT - Sure! Here's an example of a React component that generates small divs with random colors:
 
 <br />
@@ -55,7 +55,7 @@ I did however, include them in the code as comments if you are interested in rea
 
 <br />
 
-*prompt 2*
+### *prompt 2*
 > ME - Can you make it so the page is covered with boxes and they change colors on their own rather than a click<br/><br/>GPT - Sure! Here's an updated [version](https://github.com/IntuitiveHarmony/party-dots2/blob/9b74ebe8d28bca15210b4cbd2c4a76b0b34ebe49/src/App.js) of the component that generates boxes that automatically change colors:
 
 <br/>
@@ -71,7 +71,7 @@ I knew that we needed to address these problems one at a time 🔧
  
 <br/>
 
-*prompt 3*
+### *prompt 3*
 > ME - Can you make it so the boxes change at random time intervals rather than at all the same time<br/><br/>GPT - Sure! Here's an updated [version](https://github.com/IntuitiveHarmony/party-dots2/blob/ef2c7ce652c224bc41a17110f78db338c137ada4/src/App.js) of the component that generates boxes that change colors at random intervals:
 
 <br/>
@@ -108,7 +108,7 @@ Luckily, this was just party dots (as awesome as it is) and not a more important
 
 ## <img src="./public/favicon.ico" width="18em"/> Back In Business
 
-*prompt 4*
+### *prompt 4*
 
 >ME - thanks, that looks great! although the boxes are confined to a tight strip at the top of the page. can you make them take u[ the entire page?<br/><br/>GPT - Yes, you can modify the CSS styles of the BoxContainer component to make it take up the entire page. Here's an updated version of the [code](https://github.com/IntuitiveHarmony/party-dots2/blob/25b5b0935a122c2e98bd1d3bf431d633ba7eb99e/src/App.js):
 
@@ -120,7 +120,9 @@ Luckily, this was just party dots (as awesome as it is) and not a more important
 
 <br/>
 
->ME - now it is in three seperate strips<br/><br/>GPT - I see, that's likely due to the default flex-direction value of row on the display: flex property of the container<br/><br/>GPT - To make the boxes fill up the entire page without any gaps, you can set the flex-direction to column, and adjust the width and height values of the BoxContainer accordingly. Here's an updated version of the code:
+### *prompt 5*
+
+>ME - now it is in three seperate strips<br/><br/>GPT - I see, that's likely due to the default flex-direction value of row on the display: flex property of the container<br/><br/>GPT - To make the boxes fill up the entire page without any gaps, you can set the flex-direction to column, and adjust the width and height values of the BoxContainer accordingly. Here's an updated version of the [code](https://github.com/IntuitiveHarmony/party-dots2/blob/35bc93744af725c51cac640db357ab38cc6456d4/src/App.js):
 
 
 
