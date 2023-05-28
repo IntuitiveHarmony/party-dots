@@ -44,15 +44,15 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >
 >🏄 Follow Along
 >
->You can also see the various stages of party-dots in development by following these steps:
+>You can also see the various stages of party-dots in development by following these steps in your terminal:
 >
->1. Clone to your local machine
+>1. Clone the party-dots-history repo to your local machine
 >
 >```
 >git clone https://github.com/IntuitiveHarmony/party-dots-history.git
 >```
 >
->2. Install react library
+>2. Install react library locally
 >
 >```
 >npm i
@@ -571,8 +571,12 @@ It seemed like we started getting farther from where I wanted to go so I brought
 
 ## <img src="./public/favicon.ico" width="18em"/> Replacing One Error With Another
 
-Prompts 7 - 9 show us that chatGPT can help us solve errors within our code is definitely fallible.  In prompt 7 I input an error that was being thrown in the console when the code from the previous promt was ran.  I pasted the error in to the chat bot, and it was able to generate code that would avoid the `Maximum update depth exceeded.` 
+Prompts 7 - 9 show us that chatGPT can help us solve errors within our code is definitely fallible.  In prompt 7 I input an error that was being thrown in the console when the code from the previous promt was ran.  I pasted the error in to the chat bot, and it was able to generate code that would avoid the `Maximum update depth exceeded.` It was caused due to `intervalId` being inside the dependency array in the `useEffect` hook.  Don't worry, chat fiqured it out.
 
 ### *prompt 7*
 
->ME - it keeps throwing this error<br/><br/>GPT - I see, that's likely due to the default flex-direction value of row on the display: flex property of the container<br/><br/>GPT - To make the boxes fill up the entire page without any gaps, you can set the flex-direction to column, and adjust the width and height values of the BoxContainer accordingly. Here's an updated version of the code:
+>ME - it keeps throwing this error:<br/><br/>
+>```
+>Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render. at Box (http://localhost:3000/static/js/bundle.js:28:5) at div at BoxContainer (http://localhost:3000/static/js/bundle.js:62:5) at App
+>```
+><br/><br/>GPT - This error occurs when the component gets stuck in an infinite loop of rendering, and it's usually caused by a state update that triggers a re-render, which then triggers another state update, and so on. In your case, it looks like the useEffect hook inside the Box component is causing the issue.<br/><br/>GPT - To fix this, you need to pass an empty dependency array ([]) to the useEffect hook, so that it only runs once <br/><br/>GPT - when the component mounts, instead of running on every re-render.<br/><br/>GPT - Here's the updated code:
