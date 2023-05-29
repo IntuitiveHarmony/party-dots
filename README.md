@@ -81,7 +81,7 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >
 >| Commit Name   | Git SHA Key                                 | Notes |
 >| ------------- | ---------------------------------------- | ----- |
->| Final Edits to Code | af56b5c8da63df85715dfbe56aff144449844eda | favicon, idex.html, title, github link |
+>| Final Edits to Code | 3238df2c44773a487fdba9f7c72fcff9dd3ad286 | favicon, idex.html, title, github link |
 >| prompt 41     | af56b5c8da63df85715dfbe56aff144449844eda |       |
 >| prompt 40     | ac0e850640d30509df6d708a2cfc7a1f6c88aac7 |       |
 >| prompt 39     | b182ae22c3feaa1108f039b746c5b3b656dcb2f3 |       |
@@ -104,22 +104,25 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >| prompt 18     | caf2509ba9f21f74e5d4ef55d8deff8b0f1a3eb6 |       |
 >| prompt 17 - response | cdcf58e5cc0a947c070a8f6d0cdb13a76533f8bb |       |
 >| prompt 17     | 1205ab7dfe9f88fdd02e9054ab5fa197efcc1b6e |       |
->| prompt 16 💀    | 25f44c4592db92470c9d8ad4c293a0e62b7ea1fd | computers are too literal sometimes |
->| prompt 15     | 3edf8e515dc23f624dd37668b86c4fdeef4b97be |       |
->| prompt 14     | a17f5f8d4097fe1e3c2eada39245dc768d0cc56a |       |
->| prompt 13     | 866314a4dd305f5d7d85a135c0a262c74073a82d |       |
->| prompt 12     | 3c11218e2e25619ab82662191e7d079501cc1357 |       |
->| prompt 11     | 33d8fb79f0f970726a47f3e685c2ee7b4316dd7f |       |
->| prompt 10     | 9d53e7aeafdb358a6b2d3179b0a1569ef6820ce1 |       |
->| prompt 9      | 92b6d4c42de6ab9e3f39f0b06c4817c69c18ddcf |       |
->| prompt 8      | f56758c64ad2dd6d4fcd898c328e31281a9fc789 |       |
->| prompt 7      | 95eddb086ae3b91ddc262c56f1e60e1c6df3df19 |       |
->| prompt 6      | e0ae9f146b292bed35db25b667e2e75184b3e1a1 |       |
->| prompt 5      | 49e927a836f850be66a2a609e17dc1c928cfb811 |       |
->| prompt 4      | 9f304c752ae84da1fe4f196c1d16b999a3d9e860 |       |
->| prompt 3      | 0a14b8a2b5e8c619c1c44f91d8c59cc7301a61c5 |       |
->| prompt 2      | 3be204ce369a1efbf0631d38d25a38f1d14e6c2d |       |
->| prompt 1      | fdfde5253be6b56b5b8e2287ccdfab2ea3d01973 |       |
+>| prompt 16 💀    | 6756a8020ed69f3847b07f0c124abb33077f962d | computers are too literal sometimes |
+>| prompt 15     | 852d9798b3c367f48ba86cfd1e115d21c0d4f2f1 |       |
+>| prompt 14     | 55147b2290953893fd2dfe98b4b8439657ab717c |       |
+>| prompt 13     | 64648e290efecf928fd474829f88adaa6ecf1e19 |       |
+>| prompt 12     | cc09a2f376c57604f4208acd8ac5c294e3add7d6 |       |
+>| prompt 11     | 090d6744d5afe9e64f1e209c009be704e854bd4f |       |
+>| prompt 10 - Response    | e7f1e3fd895eb9e322482c49de29db5f7df4c48f |       |
+>| prompt 10 - Base    | f18b15b075c19183bc6b6a84f7a189ecf6aeeb8f |       |
+>| prompt 9      | 976614a8f5df784d908247d9cdab3e91e24b69eb |       |
+>| prompt 8      | 4ba6d1d0a94ecca218e2acbf0811b3d7120cb13b |       |
+>| prompt 7      | 0873b9c8247ebd47572bad6287f7cda04ed1355f |       |
+>| prompt 6 with error coment     | a7e5ca2bb952e318e82d8d87f6f08301f99b5e9c |       |
+>| prompt 6      | 4ae840346862eb3ad7a7f6d845b26158f5f0b19b |       |
+>| add chat.md   | f9ac3b0f10e538c85c64079f4d401328403f8e72 |       |
+>| prompt 5      | 35bc93744af725c51cac640db357ab38cc6456d4 |       |
+>| prompt 4      | 25b5b0935a122c2e98bd1d3bf431d633ba7eb99e |       |
+>| prompt 3      | ef2c7ce652c224bc41a17110f78db338c137ada4 |       |
+>| prompt 2 - comments     | 9b74ebe8d28bca15210b4cbd2c4a76b0b34ebe49 |       |
+>| prompt 1 - comments     | 0681ba0da97d2cedf1a27729d617f4fd9049e49c |       |
 >
 ></details>
 >
@@ -499,7 +502,7 @@ export default function App() {
 
 </details>
 
-This version made the boxes in on column all the way over to the right.
+This version made the boxes in on column all the way over to the left.
 
 ![thinStrip](./src/images/thinStrip.png)
 
