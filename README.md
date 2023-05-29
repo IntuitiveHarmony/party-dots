@@ -84,7 +84,7 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >
 >| Commit Name   | Git SHA Key                                 | Notes |
 >| ------------- | ---------------------------------------- | ----- |
->| Final Edits to Code (master) | 3238df2c44773a487fdba9f7c72fcff9dd3ad286 | favicon, idex.html, title, github link |
+>| Final Edits to Code (master) | 3238df2c44773a487fdba9f7c72fcff9dd3ad286 | favicon, index.html, title, github link |
 >| prompt 41     | af56b5c8da63df85715dfbe56aff144449844eda |       |
 >| prompt 40     | ac0e850640d30509df6d708a2cfc7a1f6c88aac7 |       |
 >| prompt 39     | b182ae22c3feaa1108f039b746c5b3b656dcb2f3 |       |
@@ -107,7 +107,7 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >| prompt 18     | caf2509ba9f21f74e5d4ef55d8deff8b0f1a3eb6 |       |
 >| prompt 17 - response | cdcf58e5cc0a947c070a8f6d0cdb13a76533f8bb |       |
 >| prompt 17     | 1205ab7dfe9f88fdd02e9054ab5fa197efcc1b6e |       |
->| prompt 16 💀    | 6756a8020ed69f3847b07f0c124abb33077f962d | computers are too literal sometimes |
+>| prompt 16 💀    | 6756a8020ed69f3847b07f0c124abb33077f962d | computers are too literal |
 >| prompt 15     | 852d9798b3c367f48ba86cfd1e115d21c0d4f2f1 |       |
 >| prompt 14     | 55147b2290953893fd2dfe98b4b8439657ab717c |       |
 >| prompt 13     | 64648e290efecf928fd474829f88adaa6ecf1e19 |       |
@@ -776,3 +776,19 @@ If we take the code from prompt 7 and compare it to promt 9 using a [diff checke
 Wait, what was that? 
 
 Did I just see somethng in the dependency array?  The code was supposed to be free of that, this is the code from prompt 6, not the base!  I feel like the premise for a modern day three stooges episode is cooking underneath all of this. 🎭
+
+<hr/>
+
+<br/>
+
+🚧 THIS README IS A WORK IN PROGRESS 🚧
+
+✨ REFRESH THIS PAGE SOON, MORE TO FOLLOW ✨
+
+<br/>
+
+
+## <img src="./public/favicon.ico" width="18em"/> Shout Outs
+
+I want to give a big thanks to [John Paul Haddad](http://haddadaddah.com/#about) for helping take this markdown to the next level!  Your infectious enthusiasm and creative spirit gave me the inspiration to present party dots in this context.
+
