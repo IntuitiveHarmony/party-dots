@@ -63,7 +63,7 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >3. Using the SHA keys in the chart below, pull up the version of the code you want to explore.  
 >
 >```
->git checkout 0a14b8a2b5e8c619c1c44f91d8c59cc7301a61c5
+>git checkout ef2c7ce652c224bc41a17110f78db338c137ada4
 >```
 >
 >4. This will put git in to a `detached head state` to navigate to a later commit, you will need to run this command first
