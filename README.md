@@ -30,7 +30,7 @@ Let's go! ⚡
 
 ## <img src="./public/favicon.ico" width="18em"/> Set Up
 
-To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started imputing prompts into GPT.  
+To begin, I initilized a react app and deleted the boilerplate code contained within the `app.js` and `app.css` files.  From there I started inputing prompts into GPT.  
 
 Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>paste</kbd> <kbd>frenzy!!!</kbd> I wasn't following proper git flow so my initial commit is a major portion of the project completed (sorry, octocat :octocat:).  Therefore, I have included some of my prompts and the code that was produced by GPT3 in the process of co-writing Party Dots.  
 
@@ -773,7 +773,7 @@ If we take the code from prompt 7 and compare it to promt 9 using a [diff checke
 
 <br/>
 
-Wait, what was that? 
+Wait, what was that? 👀
 
 Did I just see somethng in the dependency array?  The code was supposed to be free of that, this is the code from prompt 6, not the base!  I feel like the premise for a modern day three stooges episode is cooking underneath all of this. 🎭
 
