@@ -36,7 +36,9 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 
 ><hr/>
 >
->🔍 If you are curious, you can find the bulk of the transcript by refering to the [chat.md](https://github.com/IntuitiveHarmony/party-dots/blob/master/chat.md).  There is one small part missing from this transcript; another chat I had with GPT about getting my github link into the top right corner dot.  I didn't include it in the transcript as it seemed redundant, considering the 40+ prompts that already seem to cover that same area.  Essentially I became locked in a loop which I broke by adjusting the code myself. 
+>🔍 If you are curious, you can find the bulk of the [transcript](https://github.com/IntuitiveHarmony/party-dots/blob/master/chat.md) by refering to the chat.md.  There is one small part missing from this transcript; another chat I had with GPT about getting my github link into the top right corner dot.  I didn't include it in the transcript as it seemed redundant, considering the 40+ prompts that already seem to cover that same area.  Essentially I became locked in a loop which I broke by adjusting the code myself. 
+>
+><br/>
 >
 >🔬 If you are extra curious, feel free to explore the commit history of [party-dots-history](https://github.com/IntuitiveHarmony/party-dots-history), where I made another repo so I could get the neccessary screenschots for this write up. 
 >
@@ -113,7 +115,7 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >| prompt 10 - Response    | e7f1e3fd895eb9e322482c49de29db5f7df4c48f |       |
 >| prompt 10 - Base    | f18b15b075c19183bc6b6a84f7a189ecf6aeeb8f |       |
 >| prompt 9      | 976614a8f5df784d908247d9cdab3e91e24b69eb |       |
->| prompt 8      | 4ba6d1d0a94ecca218e2acbf0811b3d7120cb13b |       |
+>| prompt 8      | 4ba6d1d0a94ecca218e2acbf0811b3d7120cb13b | individual divs take up entire screen |
 >| prompt 7      | 0873b9c8247ebd47572bad6287f7cda04ed1355f |       |
 >| prompt 6 with error coment     | a7e5ca2bb952e318e82d8d87f6f08301f99b5e9c |       |
 >| prompt 6      | 4ae840346862eb3ad7a7f6d845b26158f5f0b19b |       |
@@ -572,9 +574,11 @@ It seemed like we started getting farther from where I wanted to go so I brought
 
 <hr/>
 
-## <img src="./public/favicon.ico" width="18em"/> Replacing One Error With Another
+## <img src="./public/favicon.ico" width="18em"/> Replacing One Error With Another, or The Loops Begin
 
-Prompts 7 - 9 show us that chatGPT can help us solve errors within our code but that it is fallible as well.  In prompt 7 I input an error that was being thrown in when the code from the previous promt was ran.  I pasted the error in to the chat bot, and it was able to generate code that would avoid the `Maximum update depth exceeded.` It was caused due to `intervalId` being inside the dependency array in the `useEffect` hook.  Don't worry, chat fiqured it out.
+Prompts 7 - 9 show us that chatGPT can help us solve errors within our code but that it is fallible as well.  In prompt 7 I input an error that was being thrown in when the code from the previous promt was ran.  I pasted the error in to the chat bot, to see if it was able to generate code that would avoid the `Maximum update depth exceeded.` I knew it was caused due to `intervalId` being inside the dependency array in the `useEffect` hook.  Don't worry, chat figured it out too.
+
+<br/>
 
 ### *prompt 7*
 
@@ -583,3 +587,191 @@ Prompts 7 - 9 show us that chatGPT can help us solve errors within our code but 
 >Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render. at Box (http://localhost:3000/static/js/bundle.js:28:5) at div at BoxContainer (http://localhost:3000/static/js/bundle.js:62:5) at App
 >```
 >GPT - This error occurs when the component gets stuck in an infinite loop of rendering, and it's usually caused by a state update that triggers a re-render, which then triggers another state update, and so on. In your case, it looks like the useEffect hook inside the Box component is causing the issue.<br/><br/>GPT - To fix this, you need to pass an empty dependency array ([]) to the useEffect hook, so that it only runs once when the component mounts, instead of running on every re-render.<br/><br/>GPT - Here's the updated code:
+
+<details>
+
+<summary>Show/ Hide Code</summary>
+
+```javascript
+import React, { useState, useEffect } from 'react';
+
+const Box = ({ size }) => {
+  const [color, setColor] = useState(getRandomColor());
+
+  useEffect(() => {
+    const intervalId = setInterval(() => setColor(getRandomColor()), Math.random() * 5000);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  return (
+    <div
+      style={{
+        backgroundColor: color,
+        width: `${size}px`,
+        height: `${size}px`,
+        margin: '1px',
+      }}
+    />
+  );
+};
+
+const BoxContainer = ({ numBoxes, boxSize }) => {
+  const boxes = Array.from({ length: numBoxes }).map((_, i) => (
+    <Box key={i} size={boxSize} />
+  ));
+  return <div style={{ display: 'flex', flexWrap: 'wrap' }}>{boxes}</div>;
+};
+
+export default function App() {
+  return <BoxContainer numBoxes={400} boxSize={8} />;
+}
+```
+
+</details>
+
+<br/>
+
+Take a look at the code if you want to, chat GPT was able to fix the dependency array issue.  The part I really want to talk about is what came next.  
+
+I felt like that we were at a point in the code that I would like to come back to so I thought chatGPT would be able to reference it's own chat history with me and girve me some sort of version control capability.  I was proven wrong two prompts later.
+
+<br/>
+
+### *prompt 8*
+
+>ME - ok lets refer to this code as base because we are going to change stuff.<br/><br/>ME - The boxes are taking up a small strip at the top. none of the previous fixes worked. What can we do to make the boxes take up all the space on the screen?<br/><br/>GPT - To make the boxes take up all the space on the screen, you can set the height of the BoxContainer to be 100vh (which means 100% of the viewport height), and set the width of the BoxContainer and Box components to be 100%.<br/><br/>GPT - Here's an updated version of the code:
+
+<details>
+
+<summary>Show/ Hide Code</summary>
+
+```javascript
+import React, { useState, useEffect } from 'react';
+
+const Box = ({ size }) => {
+  const [color, setColor] = useState(getRandomColor());
+
+  useEffect(() => {
+    const intervalId = setInterval(() => setColor(getRandomColor()), Math.random() * 5000);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  return (
+    <div
+      style={{
+        backgroundColor: color,
+        width: `${size}px`,
+        height: `${size}px`,
+        margin: '1px',
+      }}
+    />
+  );
+};
+
+const BoxContainer = ({ numBoxes, boxSize }) => {
+  const boxes = Array.from({ length: numBoxes }).map((_, i) => (
+    <Box key={i} size={boxSize} />
+  ));
+  return <div style={{ display: 'flex', flexWrap: 'wrap' }}>{boxes}</div>;
+};
+
+export default function App() {
+  return <BoxContainer numBoxes={400} boxSize={8} />;
+}
+```
+
+</details>
+
+<br/>
+
+This code gave us individual divs that took up the whole screen.  Another step in the wrong direction, but a great opprotunity for me to go back to the `base` code, right?
+
+<br/>
+
+### *prompt 9*
+
+>ME - that didn't work go back to the base please<br/><br/>GPT - Sure, here is the original base code for reference:
+
+<br/>
+
+<details>
+
+<summary>Show/ Hide Code</summary>
+
+```javascript
+import React, { useState, useEffect } from 'react';
+
+const Box = ({ size }) => {
+  const [color, setColor] = useState(getRandomColor());
+  const [intervalId, setIntervalId] = useState(null);
+
+  useEffect(() => {
+    const id = setTimeout(() => setColor(getRandomColor()), Math.random() * 5000);
+    setIntervalId(id);
+    return () => clearInterval(intervalId);
+  }, [intervalId]);
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  return (
+    <div
+      style={{
+        backgroundColor: color,
+        width: `${size}px`,
+        height: `${size}px`,
+        margin: '1px',
+      }}
+    />
+  );
+};
+
+const BoxContainer = ({ numBoxes, boxSize }) => {
+  const boxes = Array.from({ length: numBoxes }).map((_, i) => (
+    <Box key={i} size={boxSize} />
+  ));
+  return <div style={{ display: 'flex', flexWrap: 'wrap' }}>{boxes}</div>;
+};
+
+export default function App() {
+  return <BoxContainer numBoxes={400} boxSize={8} />;
+}
+```
+
+</details>
+
+<br/>
+
+If we take the code from prompt 7 and compare it to promt 9 using a [diff checker](https://www.diffchecker.com/compare/), we see that there are some differences. 
+
+![Prompt 7 -9 Diff](src/images/p7p9Diff.png)
+
+<br/>
+
+Wait, what was that? 
+
+Did I just see somethng in the dependency array?  The code was supposed to be free of that, this is the code from prompt 6, not the base!  I feel like the premise for a modern day three stooges episode is cooking underneath all of this. 🎭
