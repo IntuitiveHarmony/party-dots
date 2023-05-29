@@ -48,10 +48,11 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >
 >You can also see the various stages of party-dots in development by following these steps in your terminal:
 >
->1. Clone the party-dots-history repo to your local machine
+>1. Clone the party-dots-history repo to your local machine and `cd` in to it
 >
 >```
 >git clone https://github.com/IntuitiveHarmony/party-dots-history.git
+>cd party-dots-history
 >```
 >
 >2. Install react library locally
@@ -60,7 +61,7 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >npm i
 >```
 >
->3. Using the SHA keys in the chart below, pull up the version of the code you want to explore.  
+>3. Using the SHA keys in the chart below, pull up the version of the code you want to explore. (This is prompt 3) 
 >
 >```
 >git checkout ef2c7ce652c224bc41a17110f78db338c137ada4
@@ -83,7 +84,7 @@ Since I just "went for it" in a <kbd>prompt</kbd> => <kbd>copy</kbd> + <kbd>past
 >
 >| Commit Name   | Git SHA Key                                 | Notes |
 >| ------------- | ---------------------------------------- | ----- |
->| Final Edits to Code | 3238df2c44773a487fdba9f7c72fcff9dd3ad286 | favicon, idex.html, title, github link |
+>| Final Edits to Code (master) | 3238df2c44773a487fdba9f7c72fcff9dd3ad286 | favicon, idex.html, title, github link |
 >| prompt 41     | af56b5c8da63df85715dfbe56aff144449844eda |       |
 >| prompt 40     | ac0e850640d30509df6d708a2cfc7a1f6c88aac7 |       |
 >| prompt 39     | b182ae22c3feaa1108f039b746c5b3b656dcb2f3 |       |
