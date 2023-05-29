@@ -563,7 +563,7 @@ It seemed like we started getting farther from where I wanted to go so I brought
 >  return <BoxContainer numBoxes={400} boxSize={8} />;
 >}
 >```
-><br/><br/>GPT - Sure, what changes would you like me to make?
+><br/>GPT - Sure, what changes would you like me to make?
 
 <br/>
 
@@ -571,12 +571,12 @@ It seemed like we started getting farther from where I wanted to go so I brought
 
 ## <img src="./public/favicon.ico" width="18em"/> Replacing One Error With Another
 
-Prompts 7 - 9 show us that chatGPT can help us solve errors within our code is definitely fallible.  In prompt 7 I input an error that was being thrown in the console when the code from the previous promt was ran.  I pasted the error in to the chat bot, and it was able to generate code that would avoid the `Maximum update depth exceeded.` It was caused due to `intervalId` being inside the dependency array in the `useEffect` hook.  Don't worry, chat fiqured it out.
+Prompts 7 - 9 show us that chatGPT can help us solve errors within our code but that it is fallible as well.  In prompt 7 I input an error that was being thrown in when the code from the previous promt was ran.  I pasted the error in to the chat bot, and it was able to generate code that would avoid the `Maximum update depth exceeded.` It was caused due to `intervalId` being inside the dependency array in the `useEffect` hook.  Don't worry, chat fiqured it out.
 
 ### *prompt 7*
 
->ME - it keeps throwing this error:<br/><br/>
+>ME - it keeps throwing this error:<br/>
 >```
 >Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render. at Box (http://localhost:3000/static/js/bundle.js:28:5) at div at BoxContainer (http://localhost:3000/static/js/bundle.js:62:5) at App
 >```
-><br/><br/>GPT - This error occurs when the component gets stuck in an infinite loop of rendering, and it's usually caused by a state update that triggers a re-render, which then triggers another state update, and so on. In your case, it looks like the useEffect hook inside the Box component is causing the issue.<br/><br/>GPT - To fix this, you need to pass an empty dependency array ([]) to the useEffect hook, so that it only runs once <br/><br/>GPT - when the component mounts, instead of running on every re-render.<br/><br/>GPT - Here's the updated code:
+>GPT - This error occurs when the component gets stuck in an infinite loop of rendering, and it's usually caused by a state update that triggers a re-render, which then triggers another state update, and so on. In your case, it looks like the useEffect hook inside the Box component is causing the issue.<br/><br/>GPT - To fix this, you need to pass an empty dependency array ([]) to the useEffect hook, so that it only runs once when the component mounts, instead of running on every re-render.<br/><br/>GPT - Here's the updated code:
