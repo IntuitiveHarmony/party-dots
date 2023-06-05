@@ -51,3 +51,8 @@ h1 {
 .gitLink:hover {
   text-decoration: none;
 }
+.box {
+  /* Other styles... */
+  transition: background-color 2s;
+  /* Added transition property */
+}

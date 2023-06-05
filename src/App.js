@@ -37,6 +37,7 @@ const Box = ({ size }) => {
         paddingBottom: `${size}vw`,
         float: "left",
         boxSizing: "border-box",
+        transition: "background-color 2s",
       }}
     />
   );
@@ -84,6 +85,7 @@ const GitBox = ({ size }) => {
         color: "#fff",
         fontWeight: "bold",
         fontSize: `${size / 1.5}vw`,
+        transition: "background-color 2s",
       }}
     >
       <a
@@ -119,6 +121,7 @@ const BoxContainer = ({ numBoxes, boxSize, backgroundColor }) => {
         backgroundColor: backgroundColor,
         minHeight: "100vh",
         minWidth: "100vw",
+        transition: "background-color 2s",
       }}
     >
       {boxes}
@@ -127,7 +130,7 @@ const BoxContainer = ({ numBoxes, boxSize, backgroundColor }) => {
 };
 
 export default function App() {
-  const [warning, setWarning] = useState(true);
+  const [warning, setWarning] = useState(false);
   const [start, setStart] = useState(false); // state to determine whether the animation has started
   const [backgroundColor, setBackgroundColor] = useState(getRandomColor()); // state to set the background color of the animation
 
@@ -163,7 +166,9 @@ export default function App() {
   return warning ? (
     <Warning handleWarning={handleWarning} />
   ) : start ? (
-    <div onClick={() => handleWarning()}>
+    <div
+    // onClick={() => handleWarning()}
+    >
       <BoxContainer
         numBoxes={406}
         boxSize={7}
