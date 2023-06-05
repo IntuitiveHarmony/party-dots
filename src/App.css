@@ -1,6 +1,4 @@
-body {
-  background-color: cornflowerblue;
-}
+
 h1 {
   margin-left: 2em;
 }
@@ -53,4 +51,8 @@ h1 {
 }
 .gitLink:hover {
   text-decoration: none;
+}
+.load {
+  color: white;
+  filter: hue-rotate(180deg);
 }

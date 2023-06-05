@@ -165,7 +165,14 @@ export default function App() {
       backgroundColor={backgroundColor}
     />
   ) : (
-    <h1>
+    <h1
+      className="box-container load"
+      style={{
+        color: getRandomColor(),
+        backgroundColor: backgroundColor,
+        padding: "2em",
+      }}
+    >
       loading dots<span className="dot1">.</span>
       <span className="dot2">.</span>
       <span className="dot3">.</span>
