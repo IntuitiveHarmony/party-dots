@@ -134,7 +134,7 @@ export default function App() {
 
   useEffect(() => {
     // useEffect to set a timeout that will start the animation after 1 second
-    const timeoutId = setTimeout(() => setStart(true), 1000);
+    const timeoutId = setTimeout(() => setStart(true), 2000);
     return () => clearTimeout(timeoutId); // cleanup function to clear the timeout when the component unmounts
   }, []);
 
@@ -171,6 +171,7 @@ export default function App() {
         color: getRandomColor(),
         backgroundColor: backgroundColor,
         padding: "2em",
+        transition: "background-color 2s",
       }}
     >
       loading dots<span className="dot1">.</span>
